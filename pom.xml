@@ -29,5 +29,6 @@
         <module>po</module>
         <module>service_discovery</module>
         <module>config_server</module>
+        <module>api_gateway</module>
     </modules>
 </project>

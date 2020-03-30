@@ -1,0 +1,15 @@
+zuul:
+  routes:
+    catalog:
+      path: /catalog/**
+      serviceId: product-catalog
+      stripPrefix: false
+    order:
+      path: /catalog/*/order
+      serviceId: product-order
+      stripPrefix: false
+    greeting:
+      path: /greeting
+      serviceId: product-order
+      stripPrefix: false
+
