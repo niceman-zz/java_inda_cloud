@@ -27,5 +27,7 @@
     <modules>
         <module>pc</module>
         <module>po</module>
+        <module>service_discovery</module>
+        <module>config_server</module>
     </modules>
 </project>
