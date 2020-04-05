@@ -11,11 +11,14 @@ public class GreetingService {
     private static final Logger log = (Logger) LoggerFactory.getLogger(GreetingService.class);
 
     @Value("${server.port}")
-    private String serverPort;  // set from command line to allow multiple instances run
+    private String serverPort;
+
+    @Value("${hello.value}")
+    private String catalogType;
 
     @RequestMapping("/greeting")
     public String greeting() {
-        String msg = "Hello from product catalog:" + serverPort;
+        String msg = String.format("Hello from %s, port: %s", catalogType, serverPort);
         log.info(msg);
         return msg;
     }
